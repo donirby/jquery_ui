@@ -34,9 +34,28 @@
         ];
 
         $("document").ready(function() {
+            $("#auto1").autocomplete({
+                source: getData,
+                autoFocus: true
+            });
         });
+
+        function getData(req, callback) {
+            var result = [];
+            for (var i=0; i < programLangs.length; i++) {
+                if (programLangs[i].substring(0,1) == req.term.toUpperCase())
+                    result.push(programLangs[i]);
+            }
+            callback(result);
+        }
+
     </script>
     <style>
+       .ui-autocomplete {
+        max-height: 100px;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
     </style>
 </head>
 <body>

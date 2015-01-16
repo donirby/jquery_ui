@@ -9,7 +9,37 @@
     <script type="text/javascript" src="../jquery-ui-1.11.1/jquery-ui.js"></script>
 
     <script type="text/javascript">
-        $("document").ready(function() {       
+        $("document").ready(function() {
+            $("#datepick1").datepicker({
+                firstDay: 1,
+
+                showButtonPanel: true,
+                currentText: "Today",
+                closeText: "Close",
+                
+                constrainInput: true,
+                
+                defaultDate: 3,
+                
+                minDate: 0,
+                maxDate: "+3M",
+
+                changeMonth: true,
+                changeYear: true,
+
+                numberOfMonths: 1,
+                
+                beforeShowDay: onBeforeShowDay
+            });
+
+            function onBeforeShowDay(theDate) {
+                // Day 0 is Sunday, 6 is Saturday
+                if (theDate.getDay() == 0 || theDate.getDay() == 6) 
+                    return [false, "", "Weekends disabled"];
+                
+                return [true, ""];
+            }
+        
         });
     </script>
 </head>
