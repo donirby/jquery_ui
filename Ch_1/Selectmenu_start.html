@@ -10,6 +10,14 @@
 
     <script type="text/javascript">
         $("document").ready(function() {
+            $("#selmenu1").selectmenu();
+
+            $("#selmenu2").selectmenu();
+
+            $("#selmenu3").selectmenu({
+                icons: { button: "ui-icon-lightbulb" }
+            }).selectmenu("menuWidget")
+              .addClass("fixedHeight");
         });
     </script>
     <style>

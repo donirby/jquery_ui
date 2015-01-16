@@ -10,6 +10,24 @@
 
     <script type="text/javascript">
         $("document").ready(function() {
+            // build a basic accordion control
+            $("#accordionCtrl").accordion();
+            
+            // allow all sections to collapse. By default, the Accordion always keeps at least
+            // one section open. You can override this behavior to enable all the sections to be closed
+            // also set an option to toggle the headers by a hover event
+            $("#accordionCtrl").accordion( {
+                collapsible: true,
+                event: "click mouseover"
+            });
+            
+            // customize the icons
+            $("#accordionCtrl").accordion({
+                icons: {
+                    header: "ui-icon-circle-triangle-e",
+                    activeHeader: "ui-icon-circle-triangle-s"
+                }
+            });
         });
     </script>
 </head>

@@ -10,6 +10,39 @@
 
     <script type="text/javascript">
         $("document").ready(function() {
+            $("#sliderCtrl1").slider({
+                animate: "fast"
+            });
+
+            $("#sliderCtrl2").slider({
+                value: 75,
+                min: 0,
+                max: 200,
+                step: 25,
+                slide: function(evt, elem) {
+                    $("#amt").text(elem.value);
+                },
+                start: function(evt, elem) {
+                    $("#amt").addClass("heavytext")
+                },
+                stop: function(evt, elem) {
+                    $("#amt").removeClass("heavytext")
+                }
+            });            
+            $("#amt").text($("#sliderCtrl2").slider("value"));
+            
+            $("#sliderCtrl3").slider({
+                range: true,
+                min: 500,
+                max: 5000,
+                values: [1500, 3000],
+                slide: function(evt, elem) {
+                    $("#sl3Val1").text(elem.values[0]);
+                    $("#sl3Val2").text(elem.values[1]);
+                }
+            });
+            $("#sl3Val1").text($("#sliderCtrl3").slider("values", 0));
+            $("#sl3Val2").text($("#sliderCtrl3").slider("values", 1));
         });
     </script>
     <style>
