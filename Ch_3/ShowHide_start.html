@@ -10,6 +10,36 @@
 
     <script type="text/javascript">
         $("document").ready(function() {
+            $("#show1").click(function(evt) {
+                $("#theDiv").show("blind", 500);
+            });
+            $("#hide1").click(function(evt) {
+                $("#theDiv").hide("blind", 500);
+            });
+            $("#show2").click(function(evt) {
+                $("#theDiv").show("bounce", 500);
+            });
+            $("#hide2").click(function(evt) {
+                $("#theDiv").hide("bounce", 500);
+            });
+            $("#show3").click(function(evt) {
+                $("#theDiv").show("explode", 500);
+            });
+            $("#hide3").click(function(evt) {
+                $("#theDiv").hide("explode", 500);
+            });
+            $("#show4").click(function(evt) {
+                $("#theDiv").show("highlight", 500);
+            });
+            $("#hide4").click(function(evt) {
+                $("#theDiv").hide("highlight", 500);
+            });
+            $("#show5").click(function(evt) {
+                $("#theDiv").show("puff", 500);
+            });
+            $("#hide5").click(function(evt) {
+                $("#theDiv").hide("puff", 500);
+            });
         });
     </script>
     <style>

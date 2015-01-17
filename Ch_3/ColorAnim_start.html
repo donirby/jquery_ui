@@ -10,6 +10,20 @@
 
     <script type="text/javascript">
         $("document").ready(function() {
+            $("#anim1").click(function(evt) {
+                $("#theDiv").animate({
+                    backgroundColor: "red",
+                    color: "white",
+                    borderColor: "blue"
+                }, 800);
+            });
+            $("#anim2").click(function(evt) {
+                $("#theDiv").animate({
+                    backgroundColor: "#b3c8d0",
+                    color: "#000",
+                    borderColor: "#a9a9a9"
+                }, 800);
+            });
         });
     </script>
     <style>

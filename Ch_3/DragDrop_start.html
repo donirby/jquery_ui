@@ -10,6 +10,30 @@
 
     <script type="text/javascript">
         $("document").ready(function() {
+            $("#theDiv").draggable();
+
+//            $("#theDiv").draggable({
+//                axis: "x",
+//                handle: "h2",
+//                revert: true,
+//            });
+
+            $("#theDrop").droppable({
+                accept: "#theDiv",
+                hoverClass: "highlight",
+                tolerance: "fit",
+                
+                activate: function (evt, ui) {
+                    $(this).find("h2").css("background-color", "cornsilk");
+                },
+                deactivate: function (evt, ui) {
+                    $(this).find("h2").css("background-color", "");
+                },
+                drop: function(evt, ui) {
+                    $(this).find("h2").text("Dropped");
+                    ui.draggable.find("h2").text("Dropped");
+                }
+            });
         });
     </script>
     <style>
@@ -50,6 +74,9 @@
     <div id="theDiv">
         <h2>Drag Me</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ullamcorper nisi. Integer vel tincidunt tortor. Phasellus quis tempor est, ut ultrices tellus. </p>
+    </div>
+    <div id="theDrop" class="target">
+        <h2>Drop Target</h2>
     </div>
 </body>
 </html>
