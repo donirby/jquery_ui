@@ -1,6 +1,9 @@
 2015/01/15
 Up and Running with jQuery UI with Joe Marini
 http://www.lynda.com/sdk/jQuery-tutorials/Up-Running-jQuery-UI/186963-2.html?autoplay=true
+http://jquery.com/ jQuery Website
+http://jquerymobile.com/ jQuery Mobile Website
+http://jqueryui.com/ jQuery UI Website
 
 2015/01/16
 Added _fonts for Chunky from Deploying Icon Fonts
