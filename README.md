@@ -6,5 +6,7 @@ This is a repository for developing jQuery UI applications. It is based on a lyn
 
 ### Additional Resources
 [jQuery Website](http://jquery.com/)
+
 [jQuery Mobile Website](http://jquerymobile.com/)
+
 [jQuery UI Website](http://jqueryui.com/)
